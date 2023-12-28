@@ -1,6 +1,5 @@
 package Hw12;
 
-import javax.lang.model.element.Name;
 
 public class Main {
     public static void main(String[] args) {
