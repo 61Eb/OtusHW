@@ -1,11 +1,11 @@
 package hw.homework11;
 
 class Cat extends Animal {
-    public Cat(String name, double runningSpeed, int endurance) {
+    public Cat(String name, int runningSpeed, int endurance) {
         super(name, runningSpeed, 0, endurance);
     }
 
-    public static double run(int distance) {
+    public static int run(int distance) {
         if (distance <= 0) {
             System.out.println("Недопустимое расстояние. Расстояние должно быть больше 0.");
             return -1;
@@ -16,13 +16,13 @@ class Cat extends Animal {
             return -1;
         }
 
-        double time = distance / runningSpeed;
+        int time = distance / runningSpeed;
         endurance -= distance;
         System.out.println(name + " бежал " + distance + " метров " + time + " секунд.");
         return time;
     }
 
-    public static double swim(int distance) {
+    public static int swim(int distance) {
         System.out.println(name + " не может плавать.");
         return -1;
     }

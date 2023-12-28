@@ -3,11 +3,11 @@ package hw.homework11;
 
 
 class Horse extends Animal {
-    public Horse(String name, double runningSpeed, double swimmingSpeed, int endurance) {
+    public Horse(String name, int runningSpeed, int swimmingSpeed, int endurance) {
         super(name, runningSpeed, swimmingSpeed, endurance);
     }
 
-    public static double run(int distance) {
+    public static int run(int distance) {
         if (distance <= 0) {
             System.out.println("Недопустимое расстояние. Расстояние должно быть больше 0.");
             return -1;
@@ -18,13 +18,13 @@ class Horse extends Animal {
             return -1;
         }
 
-        double time = distance / runningSpeed;
+        int time = distance / runningSpeed;
         endurance -= distance;
         System.out.println(name + " бежал " + distance + " метров " + time + " секунд.");
         return time;
     }
 
-    public static double swim(int distance) {
+    public static int swim(int distance) {
         if (distance <= 0) {
             System.out.println("Недопустимое расстояние. Расстояние должно быть больше 0.");
             return -1;
@@ -35,7 +35,7 @@ class Horse extends Animal {
             return -1;
         }
 
-        double time = distance / swimmingSpeed;
+        int time = distance / swimmingSpeed;
         endurance -= distance * 4;
         System.out.println(name + " плавал " + distance + " метров " + time + " секунд.");
         return time;
