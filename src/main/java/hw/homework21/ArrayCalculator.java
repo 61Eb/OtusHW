@@ -1,6 +1,6 @@
 package hw.homework21;
 
-public class Homework21 {
+public class ArrayCalculator {
     public static void main(String[] args) {
         double[] array = new double[100_000_000];
 
@@ -13,6 +13,6 @@ public class Homework21 {
         long endTime = System.currentTimeMillis();
         long executionTime = endTime - startTime;
 
-        System.out.println("Время исполнения: " + executionTime + " миллисекунды");
+        System.out.println("Время исполнения: " + executionTime + " миллисекунд");
     }
 }
