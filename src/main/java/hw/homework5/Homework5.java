@@ -1,12 +1,12 @@
 package hw.homework5;
 
 public class Homework5 {
-    public void printStringAmountTimes(int times, String str) {
+    public static void printStringAmountTimes(int times, String str) {
         for (int i = 0; i < times; i++) {
             System.out.println(str);
         }
     }
-    public void sumElementsGreaterThanFive(int[] array) {
+    public static void sumElementsGreaterThanFive(int[] array) {
         int sum = 0;
         for (int num : array) {
             if (num > 5) {
@@ -15,17 +15,17 @@ public class Homework5 {
         }
         System.out.println(sum);
     }
-    public void fillArrayWithNumber(int number, int[] array) {
+    public static void fillArrayWithNumber(int number, int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] = number;
         }
     }
-    public void arrayElementsByNumber(int number, int[] array) {
+    public static void arrayElementsByNumber(int number, int[] array) {
         for (int i = 0; i < array.length; i++) {
             array[i] += number;
         }
     }
-    public void sumsOfArrayHalves(int[] array) {
+    public static void sumsOfArrayHalves(int[] array) {
         int sumFirstHalf = 0;
         int sumSecondHalf = 0;
         int mid = array.length / 2;
@@ -46,7 +46,7 @@ public class Homework5 {
             System.out.println("Суммы обеих половин равны.");
         }
     }
-    public int[] sumOfArrays(int[]... arrays) {
+    public static int[] sumOfArrays(int[]... arrays) {
         int totalLength = 0;
         for (int[] array : arrays) {
             totalLength += array.length;
@@ -64,7 +64,7 @@ public class Homework5 {
 
         return result;
     }
-    public boolean pointOfArray(int[] array) {
+    public static boolean pointOfArray(int[] array) {
         for (int i = 1; i < array.length - 1; i++) {
             int leftSum = 0;
             int rightSum = 0;
@@ -84,7 +84,7 @@ public class Homework5 {
 
         return false;
     }
-    public boolean elementsDecreasingOrIncreasing(int[] array, boolean ascending) {
+    public static boolean elementsDecreasingOrIncreasing(int[] array, boolean ascending) {
         for (int i = 1; i < array.length; i++) {
             if (ascending) {
                 if (array[i] < array[i - 1]) {
@@ -99,7 +99,7 @@ public class Homework5 {
 
         return true;
     }
-    public void reverseArray(int[] array) {
+    public static void reverseArray(int[] array) {
         int left = 0;
         int right = array.length - 1;
 
@@ -111,6 +111,18 @@ public class Homework5 {
             left++;
             right--;
         }
+    }
+
+    public static void main(String[] args) {
+        printStringAmountTimes(5, "Hello world");
+        sumElementsGreaterThanFive(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        fillArrayWithNumber(5, new int[10]);
+        arrayElementsByNumber(2, new int[]{1, 2, 3, 4, 5});
+        sumsOfArrayHalves(new int[]{1, 2, 3, 4, 5, 6});
+        sumOfArrays(new int[]{1, 2, 3}, new int[]{4, 5, 6}, new int[]{7, 8, 9});
+        pointOfArray(new int[]{1, 2, 3, 4, 5});
+        elementsDecreasingOrIncreasing(new int[]{1, 2, 3, 4, 5}, true);
+        reverseArray(new int[]{1, 2, 3, 4, 5});
     }
 
 }
