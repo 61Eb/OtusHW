@@ -14,4 +14,15 @@ public class BubbleSort {
         }
         return array;
     }
+    public static void main(String[] args) {
+        int[] array = {5, 2, 20, 11, 1, 6};
+
+        BubbleSort bubbleSort = new BubbleSort();
+        int[] sortedArray = bubbleSort.sort(array);
+
+        System.out.println("Сортированный массив:");
+        for (int num : sortedArray) {
+            System.out.print(num + " ");
+        }
+    }
 }

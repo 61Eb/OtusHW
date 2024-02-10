@@ -1,16 +1,20 @@
 package hw.homework17;
 
 public class MyQueue<T> {
-    private MyLinkedList<T> queue;
+    private MyLinkedList<T> list;
 
     public MyQueue() {
-        queue = new MyLinkedList<>();
+        list = new MyLinkedList<>();
     }
 
     public void offer(T data) {
+        list.addLast(data);
     }
 
     public T poll() {
-        return null;
+        if (list.getSize() == 0) {
+            throw new RuntimeException("Очередь пуста.");
+        }
+        return list.remove(0);
     }
 }
