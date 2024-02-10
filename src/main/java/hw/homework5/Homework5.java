@@ -112,7 +112,6 @@ public class Homework5 {
             right--;
         }
     }
-
     public static void main(String[] args) {
         printStringAmountTimes(5, "Hello world");
         sumElementsGreaterThanFive(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
