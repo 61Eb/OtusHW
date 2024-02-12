@@ -1,9 +1,10 @@
 package hw.homework27;
 
 import java.util.ArrayList;
+import java.util.List;
 
-class Box<T extends Fruit> {
-    private ArrayList<T> fruits;
+public class Box<T extends Fruit> {
+    private List<T> fruits;
 
     public Box() {
         fruits = new ArrayList<>();
@@ -26,7 +27,9 @@ class Box<T extends Fruit> {
     }
 
     public void transferFruits(Box<T> otherBox) {
-        otherBox.fruits.addAll(this.fruits);
-        this.fruits.clear();
+        if (otherBox != null && otherBox != this) {
+            otherBox.fruits.addAll(this.fruits);
+            this.fruits.clear();
+        }
     }
 }
