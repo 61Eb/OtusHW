@@ -8,6 +8,7 @@ public class ArrayReturnNew {
                 lastOneIndex = i;
             }
         }
+
         if (lastOneIndex == -1) {
             throw new RuntimeException("В массиве не найдено ничего");
         }
@@ -16,18 +17,5 @@ public class ArrayReturnNew {
             result[j] = arr[i];
         }
         return result;
-    }
-
-    public boolean containsOnlyOnesAndTwos(int[] arr) {
-        for (int num : arr) {
-            if (num != 1 && num != 2) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public static void main(String[] args) {
-
     }
 }

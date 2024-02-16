@@ -7,6 +7,7 @@ public class ArrayCheckerTest {
         int[] array3 = {1, 3};
         int[] array4 = {1, 2, 2, 1};
 
+
         System.out.println(ArrayChecker.checkArray(array1));
         System.out.println(ArrayChecker.checkArray(array2));
         System.out.println(ArrayChecker.checkArray(array3));

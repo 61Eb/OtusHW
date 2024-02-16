@@ -5,6 +5,7 @@ public class ArrayChecker {
         boolean One = false;
         boolean Two = false;
 
+
         for (int num : array) {
             for (int num1 : array) {
                 if (num1 == 1) {
